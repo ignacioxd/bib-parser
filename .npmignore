@@ -1,0 +1,11 @@
+# Directories
+/node_modules/
+/src/
+/test/
+
+# Build and support tools
+package-lock.json
+.babelrc
+.eslintrc
+.gitignore
+webpack.config.js
