@@ -289,3 +289,10 @@ export default class BibTeXParser {
     this.entries['@comments'] = this.comments;
   }
 }
+
+export const parseString = (string, asObject = false) => {
+  const parser = new BibTeXParser(string);
+  parser.bibtex();
+  delete parser.entries["@comments"];
+  return asObject ? parser.entries : Object.keys(parser.entries).map(key => parser.entries[key]);
+};
