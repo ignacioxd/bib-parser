@@ -8,7 +8,7 @@ Parse BibTeX entries into JavaScript objects (and back) including processing of 
 
 ---
 
-## Install
+## Installation
 
     npm install ignacioxd/bib-parser
 
@@ -44,7 +44,7 @@ let bibtexSource = build(parsedEntries);
 
 ## Structure of Parsed Entries
 
-Each BibTeX entry is returned as an object, with each attribute in the BibTeX entry becoming an all-lowercase attribute in its corresponding object. Each attribute will be returned in it's parsed and original formats. Additionally, authors will be further processed and returned as an array. An example of an attribute will help illustrate this.
+Each BibTeX entry is returned as an object, with each attribute in the BibTeX entry becoming an all-lowercase attribute in its corresponding object. Each attribute will be returned both in its parsed and in its original formats (see below for more details). Additionally, authors will be further processed and returned as an array. An example of an attribute will help illustrate this.
 
 ```bibtex
 @inproceedings{CiteMe1990:BetaPaper,
@@ -91,10 +91,10 @@ will be parsed as an object with this structure:
 More formally, each entry will have two special attributes: `entryType` to indicate the type of BibTeX entry in lowercase (e.g., `inproceedings`), and `entryKey` with the key identifier for the entry preserving the source's casing. Each BibTeX attribute will become an attribute in the respective object with the following structure:
 
 * `rawName`: Name of the BibTeX entry attribute as originally specified in the source string.
-* `value`: Parsed value of the attribute, including processing of basic LaTeX converted into Unicode symbols. 
+* `value`: Parsed value of the attribute, including processing of basic LaTeX converted into Unicode symbols.
 * `rawValue`: Value of the attribute as originally included in the BibTeX source string. Any LaTeX is returned as is.
 
-Additionally, `author` entries will additionally contain an `authors` array with parsed author(s) name(s).
+Additionally, `author` entries will contain an extra `authors` array with parsed author(s) name(s).
 
 ## Reconstructing BibTeX Source
 

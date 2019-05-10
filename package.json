@@ -1,7 +1,7 @@
 {
   "name": "bib-parser",
   "version": "0.0.2",
-  "description": "Parse BibTeX entries into JavaScript objects including processing of basic LaTeX in entry fields.",
+  "description": "Parse BibTeX entries into JavaScript objects (and back) including processing of basic LaTeX in entry fields.",
   "author": "Ignacio X. Domínguez",
   "license": "MIT",
   "main": "dist/bib-parser.js",
