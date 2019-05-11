@@ -69,7 +69,7 @@ will be parsed as an object with this structure:
   author: {
     rawName: 'Author',
     value: 'Last Name, Jane and Joé LastName',
-    rawValue:  "Last Name, Jane and Jo\'{e} LastName",
+    rawValue:  "Last Name, Jane and Jo\\'{e} LastName",
     authors: [
       'Jane Last Name',
       'Joé LastName'
@@ -78,7 +78,7 @@ will be parsed as an object with this structure:
   booktitle: {
     rawName: 'booktitle',
     value: 'Very Respectable Conference on β Examples',
-    rawValue: 'Very Respectable Conference on {\beta} Examples'
+    rawValue: 'Very Respectable Conference on {\\beta} Examples'
   },
   year: {
     rawName: 'YEAR',
